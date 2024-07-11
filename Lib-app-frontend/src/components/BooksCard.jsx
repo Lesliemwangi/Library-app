@@ -1,8 +1,8 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 
-function BooksCard({ book }) {
+const BooksCard = ({ book }) => {
   return (
     <Card className="custom-card">
       <Card.Img
@@ -15,11 +15,11 @@ function BooksCard({ book }) {
         <Card.Title>{book.name}</Card.Title>
         <Card.Text>{book.description.substring(0, 100)}...</Card.Text>
         <Link to={`/books/${book.id}`}>
-        <Button variant="primary">View Details</Button>
+          <Button variant="primary">View Details</Button>
         </Link>
       </Card.Body>
     </Card>
   );
-}
+};
 
 export default BooksCard;

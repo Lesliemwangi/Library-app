@@ -96,11 +96,26 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     children: [
-      { path: "login", element: <Login /> },
-      { path: "signup", element: <Signup /> },
-      { path: "books", element: <BookList /> },
-      { path: "books/:id", element: <BookDetails /> },
-      { path: "add-book", element: <AddBook /> },
+      { 
+        path: "login", 
+        element: <Login />
+      },
+      { 
+        path: "signup", 
+        element: <Signup />
+      },
+      { 
+        path: "books", 
+        element: <BookList />
+      },
+      { 
+        path: "books/:id", 
+        element: <BookDetails />
+      },
+      { 
+        path: "add-book", 
+        element: <AddBook />
+      },
     ],
   },
 ]);

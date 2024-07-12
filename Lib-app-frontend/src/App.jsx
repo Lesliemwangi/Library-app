@@ -1,6 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 import Books from "./components/BookList";
+import Footer from "./pages/Footer";
 
 const App = () => {
   const books = [
@@ -24,8 +27,14 @@ const App = () => {
     },
   ];
 
-  return <Books books={books} />;
-  
+  return (
+  <>
+  <Login />
+  <Signup />
+  <Books books={books} />;
+  <Footer />
+  </>
+  )
 };
 
 export default App;

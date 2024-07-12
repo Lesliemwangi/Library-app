@@ -1,6 +1,10 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
+<<<<<<< HEAD
+import BookList from "./components/BookList";
+=======
 import Books from "./components/BookList";
+>>>>>>> main
 
 const App = () => {
   const books = [
@@ -24,7 +28,7 @@ const App = () => {
     },
   ];
 
-  return <Books books={books} />;
+  return <BookList books={books} />;
   
 };
 

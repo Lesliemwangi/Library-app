@@ -1,4 +1,4 @@
-// buying.jsx
+// buy.jsx
 import React, { useState } from "react";
 import { Form, Button, Modal } from "react-bootstrap";
 import { useForm, Controller } from "react-hook-form";

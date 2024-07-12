@@ -25,7 +25,7 @@ const schema = z.object({
     .max(50, "Password must not exceed 50 characters"),
 });
 
-const SignUp = () => {
+const Signup = () => {
   const {
     control,
     handleSubmit: handleSubmitForm,
@@ -140,4 +140,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default Signup;

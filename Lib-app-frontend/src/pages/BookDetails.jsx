@@ -2,7 +2,7 @@ import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import Review from "./Review";
-import Buying from "./Buying";
+import Buy from "./Buy";
 
 const BookDetails = ({ books }) => {
   const { id } = useParams();
@@ -63,7 +63,7 @@ const BookDetails = ({ books }) => {
             </p>
             <div className="mb-4">
               <Review bookId={book.id} />
-              <Buying bookId={book.id} />
+              <Buy bookId={book.id} />
             </div>
           </div>
         </Col>

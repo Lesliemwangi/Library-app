@@ -85,19 +85,22 @@
 
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
-import SignUp from "./pages/SignUp"; // Correct import path
-import Login from "./pages/Login"; // Correct import path
-import BookDetails from "./pages/BookDetails"; // Correct import path
+import Signup from "./pages/Signup";
+import Login from "./pages/Login";
+import BookDetails from "./pages/BookDetails";
+import BookList from "./components/BookList";
+import AddBook from "./pages/AddBook";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     children: [
-      { path: "books", element: <Books /> },
-      { path: "books/:id", element: <BookDetails /> },
       { path: "login", element: <Login /> },
-      { path: "signup", element: <SignUp /> },
+      { path: "signup", element: <Signup /> },
+      { path: "books", element: <BookList /> },
+      { path: "books/:id", element: <BookDetails /> },
+      { path: "add-book", element: <AddBook /> },
     ],
   },
 ]);

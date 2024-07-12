@@ -1,6 +1,10 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import Home from "./components/Home";
+import Header from "./pages/Header"
+import Navbar from "./components/Navbar";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 import Books from "./components/BookList";
 
 const App = () => {
@@ -27,6 +31,10 @@ const App = () => {
 
   return (<>
     <Home />
+    <Header />  
+    <Navbar />
+    <Login />  
+    <Signup /> 
     <Books books={books} />
 
   </>);

@@ -1,10 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
-<<<<<<< HEAD
 import BookList from "./components/BookList";
-=======
-import Books from "./components/BookList";
->>>>>>> main
 
 const App = () => {
   const books = [

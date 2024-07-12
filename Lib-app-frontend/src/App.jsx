@@ -1,8 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
-import Books from "./components/BookList";
 import Home from "./components/Home";
-
+import Books from "./components/BookList";
 
 const App = () => {
   const books = [
@@ -31,7 +30,7 @@ const App = () => {
     <Books books={books} />
 
   </>);
+}
 
-};
 
 export default App;

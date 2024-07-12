@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
+import AddBook from "./pages/AddBook";
 import BookList from "./components/BookList";
 import BookDetails from "./pages/BookDetails";
 

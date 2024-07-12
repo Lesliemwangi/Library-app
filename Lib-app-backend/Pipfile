@@ -10,6 +10,7 @@ flask-restful = "*"
 flask-migrate = "*"
 flask-login = "*"
 flask-wtf = "*"
+sqlalchemy-serializer = "==1.4.21"
 
 [dev-packages]
 pytest = "*"

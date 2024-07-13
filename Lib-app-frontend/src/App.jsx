@@ -6,7 +6,7 @@ import Header from "./pages/Header"
 import Navbar from "./components/Navbar";
 // import Login from "./pages/Login";
 // import Signup from "./pages/Signup";
-import BookList from "./components/BookList";
+// import BookList from "./components/BookList";
 import Footer from "./pages/Footer";
 
 const App = () => {
@@ -32,11 +32,12 @@ const App = () => {
   ];
 
   return (<>
-    <Home />
+    
     <Header />  
     <Navbar />
+    <Home />
     <Outlet />
-    <BookList books={books} />  
+    {/* <BookList books={books} />   */}
     <Footer />
 
   </>);

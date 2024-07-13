@@ -1,11 +1,13 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
+import { Outlet } from "react-router-dom";
 import Home from "./components/Home";
 import Header from "./pages/Header"
 import Navbar from "./components/Navbar";
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
-import Books from "./components/BookList";
+// import Login from "./pages/Login";
+// import Signup from "./pages/Signup";
+import BookList from "./components/BookList";
+import Footer from "./pages/Footer";
 
 const App = () => {
   const books = [
@@ -33,9 +35,9 @@ const App = () => {
     <Home />
     <Header />  
     <Navbar />
-    <Login />  
-    <Signup /> 
-    <Books books={books} />
+    <Outlet />
+    <BookList books={books} />  
+    <Footer />
 
   </>);
 }

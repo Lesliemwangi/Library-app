@@ -1,13 +1,18 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
-import Header from "./pages/Header"
+import Header from "./pages/Header";
 import Navbar from "./components/Navbar";
-// import Login from "./pages/Login";
-// import Signup from "./pages/Signup";
-// import BookList from "./components/BookList";
+import Signup from "./pages/Signup";
+import Login from "./pages/Login";
+import BookList from "./components/BookList";
+import AddBook from "./pages/AddBook";
 import Footer from "./pages/Footer";
+
+// import About from "./components/About";
+
+// import Contacts from "./components/Contacts";
 
 const App = () => {
   const books = [
@@ -31,17 +36,22 @@ const App = () => {
     },
   ];
 
-  return (<>
-    
-    <Header />  
-    <Navbar />
-    <Home />
-    <Outlet />
-    {/* <BookList books={books} />   */}
-    <Footer />
-
-  </>);
-}
-
+  return (
+    <Router>
+      <Header />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/books" element={<BookList books={books} />} />
+        <Route path="/addbooks" element={<AddBook />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        
+        {/* <Route path="/contacts" element={<Contacts />} /> */}
+      </Routes>
+      <Footer />
+    </Router>
+  );
+};
 
 export default App;

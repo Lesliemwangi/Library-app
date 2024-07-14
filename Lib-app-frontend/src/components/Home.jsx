@@ -1,14 +1,11 @@
 import React from 'react';
-import Header from '../pages/Header';
-import Navbar from './Navbar';
 import { Container, Row, Col } from 'react-bootstrap';
 import '../App.css';
 
 function Home() {
   return (
     <>
-    <Header />
-      <Navbar />
+
       <div id="header">
         <Container className="text-center">
           <Row className="align-items-center" style={{ height: '100vh' }}>

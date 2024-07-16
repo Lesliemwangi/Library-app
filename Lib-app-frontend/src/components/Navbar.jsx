@@ -1,31 +1,38 @@
-import React from 'react'
-import '../App.css'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function Navbar() {
+const Navbar = () => {
   return (
-    <div id="header">
-            <div class="container">
-                <nav>
-                    <ul>
-                        <li><a href="#header">Home</a></li>
-                        <li><a href="#header">Login</a></li>
-                        <li><a href="#header">Sign up</a></li>
-                        <li><a href="#header">Book List</a></li>
-                        <li><a href="#s">Add Book</a></li>
-                        <li><a href="#p">About us</a></li>
-                        <li><a href="#c">Contact Us</a></li>
-                    </ul>
-                </nav>
-                <div class="intro">
-                    <h1>Welcome to<br /><span>Chapter Chatter</span></h1>
-                </div>
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <Link className="navbar-brand" to="/">Library App</Link>
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      <div className="collapse navbar-collapse" id="navbarNav">
+        <ul className="navbar-nav ml-auto">
+          <li className="nav-item">
+            <Link className="nav-link" to="/">Home</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/books">Books</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/addbooks">Add Books</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/login">Login</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/signup">Signup</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/contact">Contact</Link> {/* Updated link */}
+          </li>
+        </ul>
+      </div>
+    </nav>
+  );
+};
 
-                <div class="header-text">
-                    <h1>Where every page turn <span>is</span><br />a new adventure</h1>
-                </div>
-            </div>
-        </div>
-  )
-}
-
-export default Navbar
+export default Navbar;

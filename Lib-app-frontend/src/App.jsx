@@ -3,16 +3,13 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Header from "./pages/Header";
-import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import BookList from "./components/BookList";
 import AddBook from "./pages/AddBook";
 import Footer from "./pages/Footer";
-import Contact from "./pages/Contact";
-// import About from "./components/About";
-
-// import Contacts from "./components/Contacts";
+import Contact from "./pages/Contact";  // Ensure correct path to Contact
 
 const App = () => {
   const books = [
@@ -39,18 +36,19 @@ const App = () => {
   return (
     <Router>
       <Header />
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/books" element={<BookList books={books} />} />
-        <Route path="/addbooks" element={<AddBook />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/contact" element={<Contact />} />
-        
-        
-        {/* <Route path="/contacts" element={<Contacts />} /> */}
-      </Routes>
+      <div className="app-container">
+        <Sidebar />
+        <div className="main-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/books" element={<BookList books={books} />} />
+            <Route path="/addbooks" element={<AddBook />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
+      </div>
       <Footer />
     </Router>
   );

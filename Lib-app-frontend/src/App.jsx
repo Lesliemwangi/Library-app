@@ -9,6 +9,7 @@ import Login from "./pages/Login";
 import BookList from "./components/BookList";
 import AddBook from "./pages/AddBook";
 import Footer from "./pages/Footer";
+import Contact from './pages/Contact';
 
 // import About from "./components/About";
 
@@ -46,6 +47,7 @@ const App = () => {
         <Route path="/addbooks" element={<AddBook />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/contacts" element={<Contact />} /> 
         
         {/* <Route path="/contacts" element={<Contacts />} /> */}
       </Routes>

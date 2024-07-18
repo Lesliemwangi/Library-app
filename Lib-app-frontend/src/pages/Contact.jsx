@@ -27,9 +27,9 @@ const Contact = () => {
 
       <div className="mt-5">
         <h3>Contact Information</h3>
-        <p>Email: maxwellomwoyo@gmail.com</p>
-        <p>Phone: +254728730634</p>
-        <p>Address: Ngong Road, Kilimani, Nairobi</p>
+        <p>Email: contact@example.com</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Address: 123 Main Street, City, Country</p>
 
         <h3>Follow Us</h3>
         <ul className="list-unstyled">

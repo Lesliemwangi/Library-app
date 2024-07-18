@@ -3,16 +3,17 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Header from "./pages/Header";
-import Sidebar from "./components/Sidebar";
+import Navbar from "./components/Navbar";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import BookList from "./components/BookList";
 import AddBook from "./pages/AddBook";
 import Footer from "./pages/Footer";
-import Contact from "./pages/Contact";  
-// import About from "./components/About";
-// import Contacts from "./components/Contacts";
+import Contact from './pages/Contact';
 
+// import About from "./components/About";
+
+// import Contacts from "./components/Contacts";
 
 const App = () => {
   const books = [
@@ -34,42 +35,22 @@ const App = () => {
       description: "A dystopian social science fiction novel by George Orwell.",
       image_url: "https://example.com/1984.jpg",
     },
-    {
-      id: 4,
-      name: "The Great Gatsby",
-      description: "A novel written by American author F. Scott Fitzgerald.",
-      image_url: "https://example.com/gatsby.jpg",
-    },
-    {
-      id: 5,
-      name: "To Kill a Mockingbird",
-      description: "A novel by Harper Lee published in 1960.",
-      image_url: "https://example.com/mockingbird.jpg",
-    },
-    {
-      id: 6,
-      name: "1984",
-      description: "A dystopian social science fiction novel by George Orwell.",
-      image_url: "https://example.com/1984.jpg",
-    },
   ];
 
   return (
     <Router>
       <Header />
-      <div className="app-container">
-        <Sidebar />
-        <div className="main-content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/books" element={<BookList books={books} />} />
-            <Route path="/addbooks" element={<AddBook />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </div>
-      </div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/books" element={<BookList books={books} />} />
+        <Route path="/addbooks" element={<AddBook />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/contacts" element={<Contact />} /> 
+        
+        {/* <Route path="/contacts" element={<Contacts />} /> */}
+      </Routes>
       <Footer />
     </Router>
   );

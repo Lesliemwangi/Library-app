@@ -1,12 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './Sidebar.css'; // Ensure you create a Sidebar.css file for styling
+import './Sidebar.css'; 
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <Link className="navbar-brand" to="/">Library App</Link>
       <ul className="navbar-nav">
         <li className="nav-item">
           <Link className="nav-link" to="/">Home</Link>

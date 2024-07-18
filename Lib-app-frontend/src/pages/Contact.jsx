@@ -27,15 +27,10 @@ const Contact = () => {
 
       <div className="mt-5">
         <h3>Contact Information</h3>
-<<<<<<< HEAD
-        <p>Email: maxwellomwoyo@gmail.com</p>
-        <p>Phone: +254728730634</p>
-        <p>Address: Ngong Road, Kilimani, Nairobi</p>
-=======
         <p>Email: contact@example.com</p>
         <p>Phone: (123) 456-7890</p>
         <p>Address: 123 Main Street, City, Country</p>
->>>>>>> 5165efcaa8cc28cfcc20fd98b7df4ac6cce0c708
+
 
         <h3>Follow Us</h3>
         <ul className="list-unstyled">

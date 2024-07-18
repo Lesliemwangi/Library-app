@@ -8,13 +8,11 @@ import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import BookList from "./components/BookList";
 import AddBook from "./pages/AddBook";
-import Footer from "./pages/Footer";
-<<<<<<< HEAD
 import Contact from "./pages/Contact"
-=======
-import Contact from './pages/Contact';
+import Footer from "./pages/Footer";
 
->>>>>>> 5165efcaa8cc28cfcc20fd98b7df4ac6cce0c708
+
+
 // import About from "./components/About";
 // import Contacts from "./components/Contacts";
 

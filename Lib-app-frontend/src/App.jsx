@@ -8,7 +8,8 @@ import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import BookList from "./components/BookList";
 import AddBook from "./pages/AddBook";
-import Contact from "./pages/Contact"
+import AboutUs from "./components/AboutUs";
+import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
 
 
@@ -64,12 +65,10 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/books" element={<BookList books={books} />} />
         <Route path="/addbooks" element={<AddBook />} />
+        <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/contacts" element={<Contact />} /> 
-        
-        {/* <Route path="/contacts" element={<Contacts />} /> */}
       </Routes>
       <Footer />
     </Router>

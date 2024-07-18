@@ -16,14 +16,18 @@ const Sidebar = () => {
           <Link className="nav-link" to="/addbooks">Add Books</Link>
         </li>
         <li className="nav-item">
+          <Link className="nav-link" to="/aboutus">About Us</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/contact">Contact</Link>
+        </li>
+        <li className="nav-item">
           <Link className="nav-link" to="/login">Login</Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link" to="/signup">Signup</Link>
         </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/contact">Contact</Link>
-        </li>
+     
       </ul>
     </div>
   );

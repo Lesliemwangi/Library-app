@@ -9,7 +9,10 @@ import Login from "./pages/Login";
 import BookList from "./components/BookList";
 import AddBook from "./pages/AddBook";
 import Footer from "./pages/Footer";
-import Contact from "./pages/Contact";  // Ensure correct path to Contact
+import Contact from "./pages/Contact";  
+// import About from "./components/About";
+// import Contacts from "./components/Contacts";
+
 
 const App = () => {
   const books = [
@@ -27,6 +30,24 @@ const App = () => {
     },
     {
       id: 3,
+      name: "1984",
+      description: "A dystopian social science fiction novel by George Orwell.",
+      image_url: "https://example.com/1984.jpg",
+    },
+    {
+      id: 4,
+      name: "The Great Gatsby",
+      description: "A novel written by American author F. Scott Fitzgerald.",
+      image_url: "https://example.com/gatsby.jpg",
+    },
+    {
+      id: 5,
+      name: "To Kill a Mockingbird",
+      description: "A novel by Harper Lee published in 1960.",
+      image_url: "https://example.com/mockingbird.jpg",
+    },
+    {
+      id: 6,
       name: "1984",
       description: "A dystopian social science fiction novel by George Orwell.",
       image_url: "https://example.com/1984.jpg",

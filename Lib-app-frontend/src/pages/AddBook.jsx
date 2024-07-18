@@ -4,9 +4,9 @@ import './AddBook.css'
 export default function AddBook() {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
-  const [genre, setGenre] = useState('');
-  const [language, setLanguage] = useState('');
   const [description, setDescription] = useState('');
+  const [year, setYear] = useState('');
+  const [genre, setGenre] = useState('');
   const [image, setImage] = useState('');
 
   return (
@@ -20,6 +20,14 @@ export default function AddBook() {
         <div className="form-group">
           <label>Author:</label>
           <input type="text" value={author}onChange={(e) => setAuthor(e.target.value)} required placeholder='Type the name of the author'/>
+        </div>
+        <div className="form-group">
+          <label>Description:</label>
+          <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} required  placeholder='Give a brief description of the book'/>
+        </div>
+        <div className="form-group">
+          <label>Publication-year:</label>
+          <input type="text" value={year}onChange={(e) => setYear(e.target.value)} required placeholder='Type the language in which the book is written'/>
         </div>
         <div className="form-group">
           <label>Genre:</label>
@@ -36,16 +44,8 @@ export default function AddBook() {
           </select>
         </div>
         <div className="form-group">
-          <label>Language:</label>
-          <input type="text" value={language}onChange={(e) => setLanguage(e.target.value)} required placeholder='Type the language in which the book is written'/>
-        </div>
-        <div className="form-group">
-          <label>Description:</label>
-          <input type="text" value={description} onChange={(e) => setLanguage(e.target.value)} required  placeholder='Give a brief description of the book'/>
-        </div>
-        <div className="form-group">
           <label>Cover Image:</label>
-          <input type="url" value={image} onChange={(e) => setLanguage(e.target.value)} required  placeholder='Paste the url of the cover page of the book'/>
+          <input type="url" value={image} onChange={(e) => setImage(e.target.value)} required  placeholder='Paste the url of the cover page of the book'/>
         </div>
         <div className="form-group">
           <button type="submit" className="submit-button">Submit</button>

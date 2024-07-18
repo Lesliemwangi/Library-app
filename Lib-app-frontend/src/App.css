@@ -1,88 +1,171 @@
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("https://images.pexels.com/photos/163662/pexels-photo-163662.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; 
+  background-attachment: fixed; 
+}
+
 #header {
-    width: 100%;
-    height: 40vw;
-    background-color: slategrey;
-    background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20230426/pngtree-an-old-library-or-book-room-with-some-books-and-plants-image_2521166.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    position: relative;
-    margin: 30px auto;
-  }
-  
-  .container {
-    padding: 10px 10%;
-  }
-  
-  nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  
-  nav ul li {
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
-    align-items: ri;
-  
-  }
-  
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    position: relative;
-  
-  }
-  
-  nav ul li a::after {
-    content: '';
-    width: 100%;
-    height: 3px;
-    background: #ff004f;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s;
-  
-  }
-  
-  nav ul li a:hover::after {
-    width: 100%;
-  
-  }
-  
-  .intro {
-    text-align: right;
-  }
-  
-  .intro h1 {
-    font-size: 60px;
-    margin-top: 30px;
-    color: #EAF1B1;
-  }
-  
-  .intro h1 span {
-    color: #EAF1B1;
-  }
-  
-  .header-text {
-    margin-top: 9%;
-    font-size: 30px;
-    color: #EAF1B1;
-    
-  }
-  
-  .header-text h1 {
-    font-size: 60px;
-    margin-top: 20px;
-    color: #EAF1B1;
-  }
-  
-  .header-text h1 span {
-    color: #3a2675;
-  }
-  
+  height: 100vh;
+  color: black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.highlight {
+  color: #ffd700; 
+}
+
+.navbar {
+  background: #333;
+  padding: 10px 0;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #ffd700;
+}
+
+
+.sidebar {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  background-color: #f8f9fa;
+  border-right: 1px solid #dee2e6;
+  z-index: 1000;
+}
+
+.sidebar .nav-link {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 15px 20px;
+}
+
+.sidebar .navbar-brand {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar .navbar-brand img {
+  margin-right: 10px;
+}
+
+.main-content {
+  margin-left: 250px;
+  padding: 20px;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+button {
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+button.primary {
+  background-color: #007bff;
+  color: white;
+}
+
+button.secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+button.primary:hover {
+  background-color: #0056b3;
+}
+
+button.secondary:hover {
+  background-color: #5a6268;
+}
+
+.card {
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-card {
+  width: 25rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+
+.custom-card-img {
+  height: 20rem;
+  object-fit: cover;
+}
+
+.custom-card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.25rem;
+}
+.card .card-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}

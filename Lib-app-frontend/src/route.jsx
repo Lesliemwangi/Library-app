@@ -5,18 +5,12 @@ import Login from "./pages/Login";
 import AddBook from "./pages/AddBook";
 import BookList from "./components/BookList";
 import BookDetails from "./pages/BookDetails";
-import Home from "./components/Home";
-
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home/>,
+    element: <App />,
     children: [
-      {
-        path:"/",
-        element:<App/>
-      },
       { 
         path: "login", 
         element: <Login />

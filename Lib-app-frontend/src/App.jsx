@@ -9,7 +9,12 @@ import Login from "./pages/Login";
 import BookList from "./components/BookList";
 import AddBook from "./pages/AddBook";
 import Footer from "./pages/Footer";
+<<<<<<< HEAD
 import Contact from "./pages/Contact"
+=======
+import Contact from './pages/Contact';
+
+>>>>>>> 5165efcaa8cc28cfcc20fd98b7df4ac6cce0c708
 // import About from "./components/About";
 // import Contacts from "./components/Contacts";
 
@@ -64,6 +69,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/contacts" element={<Contact />} /> 
         
         {/* <Route path="/contacts" element={<Contacts />} /> */}
       </Routes>

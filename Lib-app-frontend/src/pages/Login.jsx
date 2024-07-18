@@ -4,7 +4,6 @@ import { useForm, Controller } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useNavigate, Link } from "react-router-dom";
-import "../style.css"; 
 
 const schema = z.object({
   email: z
@@ -48,17 +47,17 @@ const Login = () => {
   };
 
   return (
-    <div className="login-background">
+    <div className="login-background text-white">
       <Container className="mt-5 login-container">
         <Row className="justify-content-md-center">
           <Col md="6">
-            <h1 className="text-center login-heading">Login</h1>
+            <h1 className="text-center login-heading" style={{ fontSize: "5.0rem", fontWeight: "bold" }}>Login</h1>
             <Form onSubmit={handleSubmitForm(handleSubmit)}>
               <Controller
                 name="email"
                 control={control}
                 render={({ field, fieldState }) => (
-                  <Form.Group controlId="loginEmail" className="mb-3">
+                  <Form.Group controlId="loginEmail" className="mb-3" style={{ fontSize: "2.0rem", fontWeight: "bold" }}>
                     <Form.Label>Email:</Form.Label>
                     <Form.Control
                       type="email"
@@ -77,7 +76,7 @@ const Login = () => {
                 name="password"
                 control={control}
                 render={({ field, fieldState }) => (
-                  <Form.Group controlId="loginPassword" className="mb-3">
+                  <Form.Group controlId="loginPassword" className="mb-3" style={{ fontSize: "2.0rem", fontWeight: "bold" }}>
                     <Form.Label>Password:</Form.Label>
                     <Form.Control
                       type="password"
@@ -95,7 +94,7 @@ const Login = () => {
               <Button variant="primary" type="submit" className="w-100">
                 Login
               </Button>
-              <p className="mt-3 text-center">
+              <p className="mt-3 text-center" style={{ fontSize: "2.0rem", fontWeight: "bold" }}>
                 Don't have an account? <Link to="/signup">Sign Up</Link>
               </p>
             </Form>

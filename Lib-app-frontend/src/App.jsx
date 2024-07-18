@@ -3,7 +3,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Header from "./pages/Header";
-import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import BookList from "./components/BookList";
@@ -59,7 +59,7 @@ const App = () => {
   return (
     <Router>
       <Header />
-      <Navbar />
+      <Sidebar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/books" element={<BookList books={books} />} />

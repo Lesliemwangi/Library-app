@@ -44,7 +44,7 @@ const Signup = () => {
     setModalMessage("User registered successfully!");
     setShowModal(true);
     reset();
-    navigate("/login"); // Redirect to login page after successful registration
+    navigate("/login"); 
   };
 
   const handleCloseModal = () => {
@@ -53,16 +53,16 @@ const Signup = () => {
   };
 
   return (
-    <Container className="mt-5">
+    <Container className="mt-5 text-white" >
       <Row className="justify-content-md-center">
         <Col md="6">
-          <h2 className="text-center">Sign Up</h2>
+          <h2 className="text-center" style={{ fontSize: "5.0rem", fontWeight: "bold" }}>Sign Up</h2>
           <Form onSubmit={handleSubmitForm(handleSubmit)}>
             <Controller
               name="username"
               control={control}
               render={({ field, fieldState }) => (
-                <Form.Group controlId="signupUsername" className="mb-3">
+                <Form.Group controlId="signupUsername" className="mb-3" style={{ fontSize: "2.0rem", fontWeight: "bold" }}>
                   <Form.Label>Username:</Form.Label>
                   <Form.Control
                     type="text"
@@ -81,7 +81,7 @@ const Signup = () => {
               name="email"
               control={control}
               render={({ field, fieldState }) => (
-                <Form.Group controlId="signupEmail" className="mb-3">
+                <Form.Group controlId="signupEmail" className="mb-3" style={{ fontSize: "2.0rem", fontWeight: "bold" }}>
                   <Form.Label>Email:</Form.Label>
                   <Form.Control
                     type="email"
@@ -100,7 +100,7 @@ const Signup = () => {
               name="password"
               control={control}
               render={({ field, fieldState }) => (
-                <Form.Group controlId="signupPassword" className="mb-3">
+                <Form.Group controlId="signupPassword" className="mb-3" style={{ fontSize: "2.0rem", fontWeight: "bold" }}>
                   <Form.Label>Password:</Form.Label>
                   <Form.Control
                     type="password"
@@ -118,7 +118,7 @@ const Signup = () => {
             <Button variant="primary" type="submit" className="w-100">
               Sign Up
             </Button>
-            <p className="mt-3 text-center">
+            <p className="mt-3 text-center" style={{ fontSize: "2.0rem", fontWeight: "bold" }}>
               Already have an account? <Link to="/login">Login</Link>
             </p>
           </Form>

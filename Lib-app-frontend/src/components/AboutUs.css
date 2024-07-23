@@ -1,12 +1,34 @@
-.container11{
+.intro{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+.intro h1{
+    color: azure;
+    font-weight: 900;
+}
+.intro img{
+    width: 700px;
+    height: 300px;
+}
+.intro2 h3{
+    font-style: italic;
+    color: azure;
+    font-weight: 700;
+    padding-left: 300px;
+    margin-top: 15px;
+}
+
+.container11 {
     background-color: #010100;
     height: 300px;
     width: 400px;
     border-style: inset;
     border-color: white;
     margin-left: 505px;
+    margin-top: 15px;
 }
-.container11 h1{
+.container11 h3{
     font-weight: 1000;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
@@ -18,91 +40,51 @@
     margin-left: 10px;
     padding-top: 20px;
     color: white;
+    font-style: oblique;
 }
-
-.container12 {
+.container1{
     background-color: #010100;
     height: 300px;
     width: 400px;
     border-style: inset;
     border-color: white;
     margin-left: 910px;
+    transform: translate(0%, -19%);
 }
-.container12 h1{
+.container1 h1{
     font-weight: 1000;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
     color: white;
     margin-top: 30px;
 }
-.container12 p{
+.container1 p{
     font-size: x-large;
     margin-left: 10px;
     padding-top: 20px;
     color: white;
+    font-style: oblique;
 
 }
-.container22{
-    width: 90%;
-    height: 50px;
-    border-style: inset;
-    border-radius: 50px;
-    text-align: center;
-    border-color: #010100;
-    margin-top: 30px;
-    background-color: blanchedalmond;
-    margin-bottom: 30px;
-    margin-left: 70px;
-
-    text-align: center;
+.random1{
+    font-style: italic;
+font-size: 100px;
+font-style: italic;
 }
-.container22 h2{
-    margin-top: 5px;
-}
-.img{
-    text-align: center;
-}
-.img img{
-    width: 90%;
-    height: 700px;
-
-}
-.img h1{
-    font-weight: 600;
-    color: bisque;
-    font-size: 100px;
+.random1 h1{
+    color: azure;
+    padding-left: 1000px;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -70%);
-    padding: 10px;
+    transform: translate(20%, -300%);
+    
 }
-.img h1 span{
-    color: rgb(101, 101, 153);
+.random2{
+    font-style: italic;
+    font-size: 500px;
+    font-style: italic;
 }
-.img1 img{
-    height: 300px;
-    width: 400px;
-    margin-left: 910px;
-    position: absolute;
-    margin-top: 0px;
-
+.random2 h1{
+    color: azure;
+    padding-left: 300px;
+    transform: translate(5%, 70%);
 }
-.img2 img{
-    height: 300px;
-    width: 400px;
-    margin-left: 510px;
-    position: absolute;
-    margin-top: 0px;
-    padding-bottom: 400px;
-
-}
-.img3 img{
-    height: 300px;
-    width: 400px;
-    margin-left: 910px;
-    position: absolute;
-    margin-top: 0px;
-}
-
-

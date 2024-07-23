@@ -5,7 +5,6 @@ import '../App.css';
 function Home() {
   return (
     <>
-
       <div id="header">
         <Container className="text-center">
           <Row className="align-items-center" style={{ height: '100vh' }}>
@@ -14,16 +13,13 @@ function Home() {
                 Welcome to<br /><span className="highlight">Chapter Chatter</span>
               </h1>
               <p className="lead mt-0 text-white" style={{ fontSize: "2.0rem" }}>
-                Your gateway to a world of knowledge and stories. At Chapter Chatter, we believe every book has a story waiting to be discovered. 
-                Our library offers a diverse collection of books from various genres, catering to all age groups and interests. Whether you are looking 
-                to dive into the world of fiction, explore new horizons in non-fiction, or find the perfect book for your research, we have something for everyone. 
-                Join our community of book lovers and embark on a new adventure with every page turn.
+                Discover a world of captivating stories and enriching knowledge with Chapter Chatter. Our library is dedicated to curating an extensive and diverse collection of books that span across all genres, from timeless classics to contemporary bestsellers. 
+                Whether you are an avid reader seeking your next page-turner or someone new to the joys of reading, our collection offers something for everyone. Dive into the realms of fiction, explore the intricacies of non-fiction, or uncover new insights with our research materials. 
+                Every visit promises a new adventure and a deeper connection to the literary world.
               </p>
               <p className="lead mt-0 text-white" style={{ fontSize: "2.0rem" }}>
-                Your gateway to a world of knowledge and stories. At Chapter Chatter, we believe every book has a story waiting to be discovered. 
-                Our library offers a diverse collection of books from various genres, catering to all age groups and interests. Whether you are looking 
-                to dive into the world of fiction, explore new horizons in non-fiction, or find the perfect book for your research, we have something for everyone. 
-                Join our community of book lovers and embark on a new adventure with every page turn.
+                At Chapter Chatter, we celebrate the transformative power of books to inspire, educate, and entertain. Our community is passionate about reading and sharing experiences, and we invite you to be part of this vibrant dialogue. Engage in thought-provoking discussions, attend exciting events, and contribute to a culture that values knowledge and storytelling. 
+                Stay updated with the latest book releases, participate in our interactive book clubs, and share your own literary journey with fellow enthusiasts. Let Chapter Chatter be your gateway to a world where every book opens a new chapter in your life.
               </p>
             </Col>
           </Row>

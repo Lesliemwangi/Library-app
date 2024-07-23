@@ -6,64 +6,22 @@ import Header from "./pages/Header";
 import Sidebar from "./components/Sidebar";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
-import BookList from "./components/BookList";
+import Books from "./components/Books";
+import BookDetails from "./pages/BookDetails";
 import AddBook from "./pages/AddBook";
 import AboutUs from "./components/AboutUs";
 import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
 
-
-
-// import About from "./components/About";
-// import Contacts from "./components/Contacts";
-
 const App = () => {
-  const books = [
-    {
-      id: 1,
-      name: "The Great Gatsby",
-      description: "A novel written by American author F. Scott Fitzgerald.",
-      image_url: "https://example.com/gatsby.jpg",
-    },
-    {
-      id: 2,
-      name: "To Kill a Mockingbird",
-      description: "A novel by Harper Lee published in 1960.",
-      image_url: "https://example.com/mockingbird.jpg",
-    },
-    {
-      id: 3,
-      name: "1984",
-      description: "A dystopian social science fiction novel by George Orwell.",
-      image_url: "https://example.com/1984.jpg",
-    },
-    {
-      id: 4,
-      name: "The Great Gatsby",
-      description: "A novel written by American author F. Scott Fitzgerald.",
-      image_url: "https://example.com/gatsby.jpg",
-    },
-    {
-      id: 5,
-      name: "To Kill a Mockingbird",
-      description: "A novel by Harper Lee published in 1960.",
-      image_url: "https://example.com/mockingbird.jpg",
-    },
-    {
-      id: 6,
-      name: "1984",
-      description: "A dystopian social science fiction novel by George Orwell.",
-      image_url: "https://example.com/1984.jpg",
-    },
-  ];
-
   return (
     <Router>
       <Header />
       <Sidebar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/books" element={<BookList books={books} />} />
+        <Route path="/books" element={<Books />} />
+        <Route path="/books/:id" element={<BookDetails />} />
         <Route path="/addbooks" element={<AddBook />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />

@@ -50,7 +50,7 @@ function Footer() {
             <h3>
               <u>Contact Info</u>
             </h3>
-            <p>Address: Nairobi, Kenya</p>
+            <p>Address: Westlands, Nairobi, Kenya</p>
             <p>Email: chapterchatter@libraryapp.com</p>
             <p>Phone: +254 722 000 111</p>
             <p>Phone: +254 722 111 000</p>

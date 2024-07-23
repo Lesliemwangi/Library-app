@@ -11,6 +11,8 @@ flask-migrate = "*"
 flask-login = "*"
 flask-wtf = "*"
 sqlalchemy-serializer = "==1.4.21"
+flask-cors = "*"
+flask-bcrypt = "*"
 
 [dev-packages]
 pytest = "*"

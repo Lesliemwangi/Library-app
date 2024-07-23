@@ -1,46 +1,129 @@
+/* Sidebar container */
 .sidebar {
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #f8f9fa;
-    padding-top: 20px;
+  height: 100%;
+  width: 250px; /* Default width */
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff; /* Background color matching the page */
+  color: #333; /* Text color */
+  padding-top: 20px;
+  border-right: 1px solid #ddd; /* Light border for separation */
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Light shadow for depth */
+  transition: all 0.3s ease; /* Smooth transition for responsiveness */
+  z-index: 100; /* Ensure it is behind the header */
+}
+
+/* Branding section */
+.sidebar .navbar-brand {
+  display: block;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Navigation list */
+.sidebar .navbar-nav {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+}
+
+/* Navigation item */
+.sidebar .nav-item {
+  width: 100%;
+}
+
+/* Navigation link */
+.sidebar .nav-link {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+/* Navigation link hover state */
+.sidebar .nav-link:hover {
+  background-color: #f0f0f0; /* Slightly darker on hover for contrast */
+  color: #007bff;
+}
+
+/* Sidebar icons and text */
+.sidebar .nav-link .sidebar-icon {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+.sidebar .nav-link .sidebar-text {
+  display: inline; /* Default display for larger screens */
+}
+
+/* Minimized sidebar styles */
+.sidebar.minimized {
+  width: 80px; /* Minimized width */
+  overflow: hidden; /* Hide overflow content */
+  border-right: none; /* Remove border in minimized state */
+  box-shadow: none; /* Remove shadow in minimized state */
+}
+
+.sidebar.minimized .nav-link .sidebar-text {
+  display: none; /* Hide text in minimized state */
+}
+
+.sidebar.minimized .nav-link {
+  justify-content: center; /* Center icons in minimized state */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 80px; /* Minimized width for small screens */
   }
-  
-  .sidebar .navbar-brand {
-    display: block;
-    text-align: center;
-    margin-bottom: 1rem;
+  .sidebar .nav-link .sidebar-text {
+    display: none; /* Hide text in small viewports */
   }
-  
-  .sidebar .navbar-nav {
-    display: flex;
-    flex-direction: column;
-    padding-left: 0;
-  }
-  
-  .sidebar .nav-item {
-    width: 100%;
-  }
-  
   .sidebar .nav-link {
-    padding: 10px 20px;
-    color: #333;
+    justify-content: center; /* Center icons in small viewports */
   }
-  
-  .sidebar .nav-link:hover {
-    background-color: #e9ecef;
-    color: #007bff;
-  }
-  
-  .app-container {
-    display: flex;
-  }
-  
-  .main-content {
-    margin-left: 250px;
-    padding: 20px;
-    width: 100%;
-  }
-  
+}
+
+/* Dropdown menu */
+.sidebar .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  background-color: #ffffff; /* Ensure dropdown menu background is white */
+  border: 1px solid #ddd; /* Light border for dropdown */
+}
+
+/* Dropdown item styling */
+.sidebar .dropdown-item {
+  padding: 10px;
+}
+
+/* Dropdown item hover state */
+.sidebar .dropdown-item:hover {
+  background-color: #f0f0f0; /* Highlight on hover */
+}
+
+/* Ensure content is not overlapped */
+.app-container {
+  display: flex;
+  margin-left: 250px; /* Default margin for full sidebar */
+}
+
+.main-content {
+  padding: 20px;
+  width: calc(100% - 250px); /* Adjust width based on sidebar size */
+}
+
+/* Adjust main content margin when sidebar is minimized */
+.sidebar.minimized ~ .app-container {
+  margin-left: 80px; /* Adjust margin when sidebar is minimized */
+}
+
+.sidebar.minimized ~ .main-content {
+  width: calc(100% - 80px); /* Adjust width when sidebar is minimized */
+}

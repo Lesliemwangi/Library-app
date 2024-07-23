@@ -140,14 +140,14 @@ button.secondary:hover {
 
 .custom-card {
   width: 25rem;
-  height: 30rem;
+  height: 40rem;
   display: flex;
   flex-direction: column;
   transition: transform 0.2s;
 }
 
 .custom-card-img {
-  height: 20rem;
+  height: 25rem;
   object-fit: cover;
 }
 
@@ -169,3 +169,196 @@ button.secondary:hover {
   font-size: 0.875rem;
   margin-top: 0.25rem;
 }
+
+.success-message {
+  color: #28a745;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-left: 500px;
+  padding: 30px 50px;
+  
+}
+
+.login-container {
+  background: transparent;
+  backdrop-filter: blur(50px);
+  padding: 30px 30px; 
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, .2);
+  box-shadow: 8px 8px 8px rgba(208, 175, 175, 0.1);
+  width: 100%; 
+  max-width: 800px;
+  color: white;
+}
+
+.login-heading {
+  color: #fff;
+  text-align: center;
+  font-size: 4.0rem;
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+.input-box {
+  margin-bottom: 20px;
+  position: relative;
+  font-size: 2.0rem;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px 10px 10px 40px; 
+  font-size: 1.2rem;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  font-size: 1.5rem;
+}
+
+.input-icon {
+  position: absolute;
+  right: 10px;
+  top: 75%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: #aaa;
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  
+}
+
+.remember-forgot label {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.remember-forgot input[type="checkbox"] {
+  width: 1.5rem; 
+  height: 1.5rem; 
+  margin-right: 10px;
+}
+
+.remember-forgot a {
+  font-size: 1.5rem;
+}
+
+.wrapper button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 40px; 
+}
+
+button:disabled {
+  background-color: #aaa;
+}
+
+.wrapper register-link {
+  text-align: center;
+  margin: 20px 0 20px;
+}
+
+.wrapper register-link p {
+  font-size: 1.2rem;
+}
+
+.wrapper cool-text {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-left: 300px;
+  padding: 30px 50px;
+}
+
+.signup-container {
+  background-color: transparent;
+  backdrop-filter: blur(50px);
+  padding: 30px 20px;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, .2);
+  box-shadow: 8px 8px 8px rgba(208, 175, 175, 0.1);
+  width: 100%;
+  max-width: 800px; 
+  color: white; 
+}
+
+.signup-heading {
+  color: #fff;
+  text-align: center;
+  font-size: 4.0rem;
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+.input-box {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px 10px 10px 40px; 
+  font-size: 1.2rem;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  font-size: 1.5rem;
+}
+
+.input-icon {
+  position: absolute;
+  right: 10px; 
+  top: 75%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: #aaa;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+button:disabled {
+  background-color: #aaa;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.register-link p {
+  font-size: 1.2rem;
+}
+

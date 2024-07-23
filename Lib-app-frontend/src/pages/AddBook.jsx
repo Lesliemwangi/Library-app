@@ -40,7 +40,12 @@ export default function AddBook() {
             <option value="Mystery">Mystery</option>
             <option value="Biography">Biography</option>
             <option value="Romance">Romance</option>
-            <option value="History">History</option>
+            <option value="Historical-Fiction">Historical-Fiction</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Cookbook">Cookbook</option>
+            <option value="Children's">Children's</option>
+            <option value="Thriller">Thriller</option>
+           
           </select>
         </div>
         <div className="form-group">

@@ -1,7 +1,7 @@
-# models.py
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import MetaData
 from sqlalchemy_serializer import SerializerMixin
+from datetime import datetime
 
 convention = {
     "ix": 'ix_%(column_0_label)s',
@@ -24,6 +24,7 @@ class User(db.Model, SerializerMixin):
     password = db.Column(db.String(200), nullable=False)
     books = db.relationship('Book', back_populates='user')
     reviews = db.relationship('Review', back_populates='user')
+    reservations = db.relationship('Reservation', back_populates='user')
 
     def serialize(self):
         return {
@@ -53,6 +54,7 @@ class Book(db.Model, SerializerMixin):
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     user = db.relationship('User', back_populates='books')
     reviews = db.relationship('Review', back_populates='book')
+    reservations = db.relationship('Reservation', back_populates='book')
 
     def serialize(self):
         return {
@@ -66,6 +68,23 @@ class Book(db.Model, SerializerMixin):
             'user': self.user.username if self.user else None
         }
 
+class Reservation(db.Model, SerializerMixin):
+    __tablename__ = 'reservations'
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+    book_id = db.Column(db.Integer, db.ForeignKey('books.id'), nullable=False)
+    reservation_date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    user = db.relationship('User', back_populates='reservations')
+    book = db.relationship('Book', back_populates='reservations')
+
+    def serialize(self):
+        return {
+            'id': self.id,
+            'user': self.user.username if self.user else None,
+            'book': self.book.title if self.book else None,
+            'reservation_date': self.reservation_date.isoformat()
+        }
+
 class Review(db.Model, SerializerMixin):
     __tablename__ = 'reviews'
     id = db.Column(db.Integer, primary_key=True)
@@ -74,3 +93,11 @@ class Review(db.Model, SerializerMixin):
     book_id = db.Column(db.Integer, db.ForeignKey('books.id'), nullable=False)
     user = db.relationship('User', back_populates='reviews')
     book = db.relationship('Book', back_populates='reviews')
+
+    def serialize(self):
+        return {
+            'id': self.id,
+            'comment': self.comment,
+            'user': self.user.username if self.user else None,
+            'book': self.book.title if self.book else None
+        }

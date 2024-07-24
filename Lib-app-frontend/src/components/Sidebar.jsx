@@ -66,7 +66,7 @@ const Sidebar = () => {
               <span className="sidebar-text">Login</span>
             </Link>
           </li>
-          {isLoggedIn && (
+          {/* {isLoggedIn && (
             <li className="nav-item mt-auto">
               <div className="dropdown">
                 <button
@@ -89,7 +89,7 @@ const Sidebar = () => {
                 )}
               </div>
             </li>
-          )}
+          )} */}
         </ul>
       </div>
     </div>

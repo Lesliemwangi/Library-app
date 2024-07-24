@@ -1,4 +1,3 @@
-# add_book.py
 from flask_restful import Resource, reqparse
 from models import Book, Genre, db
 
@@ -33,3 +32,11 @@ class AddBookResource(Resource):
         db.session.add(book)
         db.session.commit()
         return book.serialize(), 201
+
+    def delete(self, id):
+        book = Book.query.filter_by(id==id).first()
+        if book == None:
+            return {'message': 'Book not found'}, 404
+        db.session.delete(book)
+        db.session.commit()
+        return {'message': 'Book deleted successfully'}, 200

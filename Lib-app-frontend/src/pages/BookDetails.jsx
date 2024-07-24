@@ -10,12 +10,12 @@ import {
   Alert,
   Modal,
 } from "react-bootstrap";
-import { FaHeart } from "react-icons/fa";
 import Review from "./Review";
-import Favorites from "../components/Favorites"; // Import the Favorites component
-import { toast } from "react-hot-toast"; // Assuming you are using react-hot-toast for notifications
+import ReserveBook from "./ReserveBook";
+// import Favorites from "../components/Favorites"; 
 
-const BASE_URL = "http://localhost:5000"; // Update this with your actual base URL
+
+const BASE_URL = "http://localhost:5000"; 
 
 function BookDetails() {
   const { id } = useParams();
@@ -44,9 +44,6 @@ function BookDetails() {
     fetchBookDetails();
   }, [id]);
 
-  const handleAddToFavorites = () => {
-    setShowModal(true); // Show the modal when a book is successfully added to favorites
-  };
 
   if (loading) {
     return (
@@ -130,13 +127,14 @@ function BookDetails() {
             </p>
             <div className="mb-4">
               <Review bookId={book.id} />
-              <Col md={15}>
+              <ReserveBook bookId={book.id} userId={1} /> 
+              {/* <Col md={15}>
                 <Favorites
                   bookId={id}
                   onAddToFavorites={handleAddToFavorites}
                 />{" "}
-                {/* Add the Favorites component here */}
-              </Col>
+                Add the Favorites component here
+              </Col> */}
             </div>
           </div>
         </Col>
